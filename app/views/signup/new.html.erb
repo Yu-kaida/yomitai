@@ -1,0 +1,29 @@
+<div class="bg-gray-800"> 
+  <%= form_with model: @user, url: signup_path do |form| %>
+    <ul>
+      <li class="text-white">
+        Name
+        <%= form.text_field :user_name %>
+      </li>
+
+      <li class="text-white">
+        E-mail
+        <%= form.text_field :email %>
+      </li>
+
+      <li class="text-white">
+        Password
+        <%= form.password_field :password %>
+      </li>
+
+      <li class="text-white">
+        Password(again)
+        <%= form.password_field :password_confirmation %>
+      </li>
+      
+      <li class="text-white">
+        <%= form.submit %>
+      </li>
+    </ul>
+  <% end %>
+</div>
